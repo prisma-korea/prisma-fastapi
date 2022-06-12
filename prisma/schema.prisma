@@ -1,0 +1,61 @@
+generator client {
+  provider  = "prisma-client-py"
+  interface = "asyncio"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  male
+  female
+}
+
+enum AuthType {
+  email
+  facebook
+  google
+  apple
+}
+
+model User {
+  id        String    @id @default(cuid()) @db.VarChar(255)
+  email     String    @unique @db.VarChar(255)
+  password  String?   @db.VarChar(255)
+  name      String?   @db.VarChar(255)
+  nickname  String?   @db.VarChar(255)
+  thumbURL  String?   @db.VarChar(255)
+  photoURL  String?   @db.VarChar(255)
+  birthDay  DateTime?
+  gender    Gender?
+  phone     String?   @db.VarChar(255)
+  verified  Boolean?
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @default(now())
+  deletedAt DateTime?
+  posts     Post[]
+  profile   Profile?
+}
+
+model Profile {
+  id       String    @id @default(cuid()) @db.VarChar(255)
+  socialId String?
+  authType AuthType?
+  userId   String    @unique @db.VarChar(255)
+  User     User      @relation(fields: [userId], references: [id])
+}
+
+model Post {
+  id        Int       @id @default(autoincrement())
+  title     String    @db.VarChar(255)
+  content   String?
+  published Boolean   @default(false)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  deletedAt DateTime?
+
+  userId String @db.VarChar(255)
+  user   User   @relation(fields: [userId], references: [id])
+}
