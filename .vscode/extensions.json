@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-python.black-formatter",
+    "prisma.prisma",
+    "ms-python.vscode-pylance",
+    "ms-python.python"
+  ]
+}

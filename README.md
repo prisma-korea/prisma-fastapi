@@ -1,5 +1,14 @@
 # Prisma FastApi
 
+[![CI](https://github.com/prisma-korea/prisma-fastapi/actions/workflows/main.yml/badge.svg)](https://github.com/prisma-korea/prisma-fastapi/actions/workflows/main.yml)
+
+## Setup virtual environment
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+```
+
 ## Install requirements
 
 ```sh
