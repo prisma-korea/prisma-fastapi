@@ -1,5 +1,12 @@
 # Prisma FastApi
 
+## Setup virtual environment
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+```
+
 ## Install requirements
 
 ```sh
