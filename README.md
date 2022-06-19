@@ -34,3 +34,11 @@ prisma generate
 ```sh
 uvicorn main:app --reload
 ```
+
+## Notes
+
+> After installing packages
+
+```sh
+pip freeze > requirements.txt
+```
