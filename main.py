@@ -20,6 +20,5 @@ async def shutdown():
 
 
 @app.get("/")
-async def read_root():
-    users = await prisma.user.find_many()
-    return {"users": users}
+def read_root():
+    return {"version": "1.0.0"}

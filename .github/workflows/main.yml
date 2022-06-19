@@ -48,5 +48,5 @@ jobs:
           black src
           black --check src
 
-      # - name: Test with pytest
-      #   run: pytest
+      - name: Test with pytest
+        run: pytest
