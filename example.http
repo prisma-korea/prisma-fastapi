@@ -1,0 +1,23 @@
+POST http://localhost:8000/apis/auth/sign-in HTTP/1.1
+content-type: application/json
+
+{
+  "email": "email5@email.com",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:8000/apis/auth/sign-up HTTP/1.1
+content-type: application/json
+
+{
+  "email": "email7@email.com",
+  "password": "password",
+  "name": "User1",
+  "nickname": "User Nick"
+}
+
+###
+
+GET http://localhost:8000/apis/users HTTP/1.1
