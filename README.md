@@ -2,6 +2,9 @@
 
 [![CI](https://github.com/prisma-korea/prisma-fastapi/actions/workflows/main.yml/badge.svg)](https://github.com/prisma-korea/prisma-fastapi/actions/workflows/main.yml)
 
+## Blog post
+- [Medium](https://medium.com/dooboolab/prisma-with-python-and-fastapi-33bf25bb20c0)
+
 ## Setup virtual environment
 
 ```sh
