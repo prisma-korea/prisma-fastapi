@@ -32,6 +32,7 @@ pydantic==1.9.1
 PyJWT==2.4.0
 pyparsing==3.0.9
 pytest==7.1.2
+pytest-asyncio==0.18.3
 python-dotenv==0.20.0
 PyYAML==6.0
 requests==2.28.0
